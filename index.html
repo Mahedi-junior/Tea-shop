@@ -16,6 +16,9 @@
     <!-- Google Icon kits -->
     <script src="https://kit.fontawesome.com/0b4db4beae.js" crossorigin="anonymous"></script>
 
+    <!-- AOS Animation link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    
     <!-- Tailwind custom color -->
     <script>
         tailwind.config = {
@@ -33,37 +36,50 @@
         .font-manrope{
             font-family: "Manrope", sans-serif;
         }
+        
+        .card>.card-star{
+          background: #000;
+        }
+        .card-star{
+          display: none;
+        }
+        .card-star:hover{
+          display: block;
+        }
+
     </style>
+
+    
 </head>
 
 
 
 
 <body class="font-manrope ">
-    <header class="container mx-auto">
+    <header class="container mx-auto lg:mt-10">
       
             <!-- <div class="hero bg-gradient-to-r from-indigo-100 via-purple-300 to-pink-300 w-full"> -->
             <div class="hero">
-                <div class="hero-content flex flex-col lg:flex-row">
+                <div class="flex flex-col lg:flex-row gap-10">
 
-                  <div class="p-5 lg:p-10">
+                  <div data-aos="fade-right" data-aos-duration="3000" class="p-5 lg:p-10 ">
                     <div class="lg:text-7xl text-4xl font-extrabold leading-tight">
-                    <h1>It's good </h1> 
-                    <h1>tea time at The</h1>
-                    <h1> Tea House</h1>
+                    <h1>It's good time</h1> 
+                    <h1><span class="text-orange-600">Tea</span> at The</h1>
+                    <h1>tea house</h1>
                     </div>
                     <p class="py-5 text-base">
                         Tea and Botanical Solutions Supplier Give Optimum Satisfaction To Your Taste Buds.
                     </p>
-                    <button class="btn bg-gradient-to-r from-[#FF8938] via-orange-600 to-[#FF0000] text-white font-bold">Explore More <i class="fa-solid fa-arrow-up"></i></button> 
+                    <button class="btn bg-orange-600 text-white hover:bg-gradient-to-r from-[#FF8938] via-orange-600 to-[#FF0000]  font-bold">Explore More <i class="fa-solid fa-arrow-up"></i></button> 
                   </div>
 
-                  <div class="lg:px-10 flex items-center justify-center">
+                  <div data-aos="fade-left" data-aos-duration="2000" class="lg:px-10 ">
                     <div class="">
                       <img
                     src="/images/banner.png"
-                    class="lg:max-w-[480px]  mt-20"  />
-                    <div class="flex p-4 items-center drop-shadow-lg  w-64 -mt-24 bg-white rounded">
+                    class="lg:max-w-[540px]  mt-20"  />
+                    <div class="flex ms-5 p-4 items-center drop-shadow-lg  w-64 -mt-24 bg-white rounded">
                             <i class="fa-solid fa-star text-2xl text-amber-400"></i>
                             <div class="px-4 font-semibold">
                                 <p>5.00</p>
@@ -79,70 +95,95 @@
     </header>
 
     <main class="container mx-auto">
-         <section>
+         <section class="py-10 mt-10" data-aos="fade-up" data-aos-duration="2000">
           <div class="mt-32 mb-10">
             <h1 class="text-6xl font-extrabold text-center">Our Featured Products</h1>
             <p class="text-center lg:mx-52 p-7 text-sm">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
           </div>
- 
-          <div class="flex flex-col  justify-center md:flex-2 lg:flex-row mb-10">
-            <div class="card lg:w-[267px] shadow-xl mx-10 lg:mx-5">
-              <figure class="pt-10 ">
+          
+          <!-- card -->
+          <div  data-aos="fade-up" data-aos-duration="2000" class="flex flex-col justify-center md:flex-2 lg:flex-row my-10">
+
+            <div class="card group lg:w-[267px] shadow-xl mx-10 lg:mx-5 hover:scale-105 hover:text-white hover:bg-orange-600 duration-1000 ease-linear">
+              
+                <div class="badge hidden group-hover:block -mt-2 -ms-3 bg-slate-200"><span class="font-bold text-orange-500">5</span> <i class="fa-solid fa-star  text-amber-500"></i> </div>
+              
+              <figure class="">
                 <img
                   src="/images/tea-1.png"
                   alt="Shoes"
-                  class="rounded-xl" />
+                  class="rounded-xl pt-5"/>
               </figure>
               <div class="card-body items-center text-center">
                 <h2 class="text-base font-bold">Milk Tea</h2>
-                <p class="text-sm">Creamer could be replaced by fresh milk</p>
+                <p class="text-sm">Milk tea refers to several forms of beverage found in many cultures, </p>
               </div>
             </div>
 
-            <div class="card lg:w-[267px] shadow-xl mx-10 lg:mx-5">
-              <figure class="pt-10 ">
-                <img
-                  src="/images/tea-2.png"
-                  alt="Shoes"
-                  class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="text-base font-bold">Milk Tea</h2>
-                <p class="text-sm">Creamer could be replaced by fresh milk</p>
-              </div>
+            <div class="card relative group lg:w-[267px] shadow-xl  mx-10 lg:mx-5 hover:scale-105 hover:text-white hover:bg-orange-600 duration-1000">
+              
+              <div class="badge hidden group-hover:block -mt-2 -ms-3 bg-slate-200"><span class="font-bold text-orange-500">5</span> <i class="fa-solid fa-star  text-amber-500"></i> </div>
+            
+            <figure class="">
+              <img
+                src="/images/tea-2.png"
+                alt="Shoes"
+                class="rounded-xl pt-5 " />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="text-base font-bold">Black Tea</h2>
+              <p class="text-sm">Black tea is a type of tea that is more oxidized than oolong,</p>
             </div>
+            
+          </div>
 
-            <div class="card lg:w-[267px] shadow-xl mx-10 lg:mx-5">
-              <figure class="pt-10 ">
-                <img
-                  src="/images/tea-3.png"
-                  alt="Shoes"
-                  class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="text-base font-bold">Milk Tea</h2>
-                <p class="text-sm">Creamer could be replaced by fresh milk</p>
-              </div>
-            </div>
-
-            <div class="card lg:w-[267px] shadow-xl mx-10 lg:mx-5">
-              <figure class="pt-10 ">
-                <img
-                  src="/images/tea-4.png"
-                  alt="Shoes"
-                  class="rounded-xl" />
-              </figure>
-              <div class="card-body items-center text-center">
-                <h2 class="text-base font-bold">Milk Tea</h2>
-                <p class="text-sm">Creamer could be replaced by fresh milk</p>
-              </div>
-            </div>
+          <div class="card relative group lg:w-[267px] shadow-xl  mx-10 lg:mx-5 hover:scale-105 hover:text-white hover:bg-orange-600 duration-1000">
+              
+            <div class="badge hidden group-hover:block -mt-2 -ms-3 bg-slate-200"><span class="font-bold text-orange-500">5</span> <i class="fa-solid fa-star  text-amber-500"></i> </div>
+          
+          <figure class="">
+            <img
+              src="/images/tea-3.png"
+              alt="Shoes"
+              class="rounded-xl pt-5 " />
+          </figure>
+          <div class="card-body items-center text-center">
+            <h2 class="text-base font-bold">Black Tea</h2>
+            <p class="text-sm">Black tea is a type of tea that is more oxidized than oolong,</p>
+          </div>
+          
+        </div>
+        
+        <div class="card relative group lg:w-[267px] shadow-xl  mx-10 lg:mx-5 hover:scale-105 hover:text-white hover:bg-orange-600 duration-1000">
+              
+          <div class="badge hidden group-hover:block -mt-2 -ms-3 bg-slate-200"><span class="font-bold text-orange-500">5</span> <i class="fa-solid fa-star  text-amber-500"></i> </div>
+        
+        <figure class="">
+          <img
+            src="/images/tea-4.png"
+            alt="Shoes"
+            class="rounded-xl pt-5 " />
+        </figure>
+        <div class="card-body items-center text-center">
+          <h2 class="text-base font-bold">Black Tea</h2>
+          <p class="text-sm">Black tea is a type of tea that is more oxidized than oolong,</p>
+        </div>
+        
+      </div>
           </div>
          </section>
+
+         
     </main>
 
     <footer>
 
     </footer>
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
 </body>
 </html>
